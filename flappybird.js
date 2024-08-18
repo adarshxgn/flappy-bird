@@ -107,7 +107,9 @@ function update(){
     context.fillText(score,5,45);
 
     if(gameOver){
-        context.fillText("GAME OVER !!!",20,300)
+        context.fillText("GAME OVER !!!",20,200)
+        context.fillText("Press Space to",20,300)
+        context.fillText("         Start",20,350)
     }
 }
 
@@ -149,7 +151,9 @@ function movebird (e){
         bird.y = birdY;
         pipeArray = [];
         score = 0;
-        gameOver = false;
+        if(e.code=="Space"){
+            gameOver = false;
+        }
     }
     }
 }
